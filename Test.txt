@@ -1,0 +1,8 @@
+#京东自助脚本 https://github.com/lxk0301/scripts
+https://raw.githubusercontent.com/lxk0301/scripts/master/Loon/lxk0301_LoonTask.conf
+
+#Loon 获取CK合集 https://github.com/Tartarus2014/Loon-Script
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Cookie.conf
+
+#Loon 脚本合集 https://github.com/Tartarus2014/Loon-Script
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf
