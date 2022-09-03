@@ -4,6 +4,8 @@
 #!homepage= https://github.com/yjjsto
 #!icon= https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
 
+##cron "15 17 * * *" script-path= https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js, tag=小米运动
+
 [Script]
 http-response ^https:\/\/account\.huami\.com\/v2\/client\/login script-path= https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js, requires-body=true, timeout=3600, tag=小米运动获取Token
 
