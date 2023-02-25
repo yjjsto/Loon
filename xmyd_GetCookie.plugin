@@ -1,13 +1,8 @@
-#!name= 小米运动获取Cookie
-#!desc= 小米运动获取Cookie；建议使用后手动将该插件禁用, 以避免无意义的MITM。
-#!author= Yjjsto
-#!homepage= https://github.com/yjjsto
-#!icon= https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
-
-##cron "15 17 * * *" script-path= https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js, tag=小米运动
 
 [Script]
 http-response ^https:\/\/account\.huami\.com\/v2\/client\/login script-path= https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js, requires-body=true, timeout=3600, tag=小米运动获取Token
 
+http-request ^https:\/\/auth\.aliyundrive\.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=true, timeout=10, enabled=false, tag=阿里网盘token获取
+
 [MITM]
-hostname = account.huami.com
+hostname = account.huami.com,auth.aliyundrive.com
