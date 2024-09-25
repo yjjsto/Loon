@@ -1,0 +1,54 @@
+#!desc = Get-Token
+#!data = 2024-09-25
+
+[Argument]
+arg1 = switch,true,tag=高德地图Token
+arg2 = switch,true,tag=比格披萨Token
+arg3 = switch,true,tag=达美乐披萨Token
+arg4 = switch,true,tag=美团买菜token
+arg5 = switch,true,tag=美的Token
+arg6 = switch,true,tag=蜜雪冰城Token
+arg7 = switch,true,tag=奈雪Token
+arg12 = switch,true,tag=柠季Token
+arg8 = switch,true,tag=奶茶多合一Token
+arg9 = switch,true,tag=小蚕霸王餐Token
+arg10 = switch,true,tag=万达智慧商业Token
+arg11 = switch,true,tag=顺丰速运Token
+arg13 = switch,true,tag=携程Token
+arg14 = switch,true,tag=阿里云Token
+arg15 = switch,true,tag=什么值得买Token
+
+[Script]
+http-response ^https?:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://github.com/yjjsto/Loon/raw/main/script/ampDache.js, requires-body=true, timeout=60, enable = {arg1}, tag=高德地图Token
+
+http-request ^https:\/\/m\.hualala\.com\/orh5\/promotionEvent\/getSignInEventDetail.+ script-path=https://github.com/yjjsto/Loon/raw/main/script/bgps.js, requires-body=true, timeout=60, enable = {arg2}, tag=比格披萨Token
+
+http-request ^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone script-path=https://github.com/yjjsto/Loon/raw/main/script/dlm.js,requires-body=true, timeout=60, enable = {arg3}, tag=达美乐披萨Token
+
+http-request ^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://github.com/yjjsto/Loon/raw/main/script/meituan.coin.cookie.js, requires-body=true, timeout=60, enable = {arg4}, tag=美团买菜Token
+
+http-request ^https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo script-path=https://github.com/yjjsto/Loon/raw/main/script/midea.js, requires-body=true, timeout=60, enable = {arg5}, tag=美的Token
+
+http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://github.com/yjjsto/Loon/raw/main/script/mxbc.js, requires-body=true, timeout=60,  enable = {arg6}, tag=蜜雪冰城Token
+
+http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://github.com/yjjsto/raw/blob/main/script/naixue.js, requires-body=true, timeout=60, enable = {arg7}, tag=奈雪Token
+
+http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://github.com/yjjsto/Loon/raw/main/script/teaMilk.js, requires-body=true, timeout=60, enable = {arg8}, tag=奶茶多合一Token
+http-request ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign) script-path=https://github.com/yjjsto/Loon/raw/main/script/teaMilk.js, requires-body=true, timeout=60, enable = {arg8}, tag=奶茶多合一Token
+
+http-response ^https:\/\/gw\.xiaocantech\.com\/rpc script-path=https://github.com/yjjsto/Loon/blob/main/script/xcbwc.js, requires-body=true, timeout=60, enable = {arg9}, tag=小蚕霸王餐Token
+
+http-response ^https?:\/\/www\.wandawic\.com\/api\/foreground\/loginregister\/queryUser script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,requires-body=true, timeout=60, enable = {arg10}, tag=万达智慧商业Token
+
+http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://github.com/yjjsto/Loon/raw/main/script/sfsy.js,requires-body=true, timeout=60, enable = {arg11}, tag=顺丰速运Token
+
+http-response ^https?:\/\/pos\.meituan\.com\/api\/v1\/crm\/frontend\/campaign\/display script-path=https://github.com/yjjsto/Loon/blob/main/script/ningji.js,requires-body=true, timeout=60, enable = {arg12}, tag=柠季Token
+
+http-response ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/[a-zA-Z]+Login(?:$|\?) script-path=https://github.com/yjjsto/Loon/raw/main/script/Ctrip.js,requires-body=true, timeout=60, enable = {arg13}, tag=携程Token
+
+http-response ^https?:\/\/developer\.aliyun\.com\/developer\/api\/my\/user\/getUser script-path=https://github.com/yjjsto/Loon/raw/main/script/aliyun_web.js,requires-body=true, timeout=60, enable = {arg14}, tag=阿里云Token
+
+http-request ^https?:\/\/user-api\.smzdm\.com\/checkin$ script-path=https://github.com/yjjsto/Loon/raw/main/script/smzdm_daily.js, requires-body=true, timeout=60, enable = {arg15}, tag=什么值得买Token
+
+[MITM]
+hostname = *.amap.com,m.hualala.com,game.dominos.com.cn,mall.meituan.com,mvip.midea.cn,mxsa.mxbc.net,tm-web.pin-dao.cn,webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,gw.xiaocantech.com,www.wandawic.com,mcs-mimp-web.sf-express.com,pos.meituan.com,m.ctrip.com,developer.aliyun.com,user-api.smzdm.com,
