@@ -58,7 +58,7 @@ arg17 = switch,true,tag=BoxJs备份
 cron {arg01} script-path=https://github.com/yjjsto/Loon/raw/main/script/ampDache.js, enable = {arg1}, tag=高德地图
 cron {arg02} script-path=https://github.com/yjjsto/Loon/raw/main/script/bgps.js, enable = {arg2}, tag=比格披萨
 cron {arg03} script-path=https://github.com/yjjsto/Loon/raw/main/script/dlm.js,enable = {arg3}, tag=达美乐披萨
-cron {arg04} script-path=https://github.com/yjjsto/Loon/raw/main/script/meituan.coin.cookie.js, enable = {arg4}, tag=美团买菜
+cron {arg04} script-path=https://github.com/yjjsto/Loon/raw/main/script/meituan.coin.js, enable = {arg4}, tag=美团买菜
 cron {arg05} script-path=https://github.com/yjjsto/Loon/raw/main/script/midea.js, enable = {arg5}, tag=美的
 cron {arg06} script-path=https://github.com/yjjsto/Loon/raw/main/script/mxbc.js, enable = {arg6}, tag=蜜雪冰城
 cron {arg07} script-path=https://github.com/yjjsto/Loon/raw/main/script/naixue.js, enable = {arg7}, tag=奈雪
