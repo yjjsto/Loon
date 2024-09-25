@@ -6,8 +6,8 @@
 arg01 = input,"1 9 * * *",tag=高德地图
 arg1 = switch,true,tag=高德地图Token
 
-arg02 = input,"2 9 * * *",tag=比格披萨
-arg2 = switch,true,tag=比格披萨Token
+#arg02 = input,"2 9 * * *",tag=比格披萨
+#arg2 = switch,true,tag=比格披萨Token
 
 arg03 = input,"3 9 * * *",true,tag=达美乐披萨
 arg3 = switch,true,tag=达美乐披萨Token
@@ -56,7 +56,7 @@ arg17 = switch,true,tag=BoxJs备份
 
 [Script]
 cron {arg01} script-path=https://github.com/yjjsto/Loon/raw/main/script/ampDache.js, enable = {arg1}, tag=高德地图
-cron {arg02} script-path=https://github.com/yjjsto/Loon/raw/main/script/bgps.js, enable = {arg2}, tag=比格披萨
+#cron {arg02} script-path=https://github.com/yjjsto/Loon/raw/main/script/bgps.js, enable = {arg2}, tag=比格披萨
 cron {arg03} script-path=https://github.com/yjjsto/Loon/raw/main/script/dlm.js,enable = {arg3}, tag=达美乐披萨
 cron {arg04} script-path=https://github.com/yjjsto/Loon/raw/main/script/meituan.coin.js, enable = {arg4}, tag=美团买菜
 cron {arg05} script-path=https://github.com/yjjsto/Loon/raw/main/script/midea.js, enable = {arg5}, tag=美的
