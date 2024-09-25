@@ -27,7 +27,7 @@ http-request ^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone script-path=h
 
 http-request ^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://github.com/yjjsto/Loon/raw/main/script/meituan.coin.cookie.js, requires-body=true, timeout=60, enable = {arg4}, tag=美团买菜Token
 
-http-request ^https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo script-path=https://github.com/yjjsto/Loon/raw/main/script/midea.js, requires-body=true, timeout=60, enable = {arg5}, tag=美的Token
+http-request ^https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo script-path=https://github.com/yjjsto/Loon/raw/main/script/midea.js, timeout=60, enable = {arg5}, tag=美的Token
 
 http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://github.com/yjjsto/Loon/raw/main/script/mxbc.js, requires-body=true, timeout=60,  enable = {arg6}, tag=蜜雪冰城Token
 
