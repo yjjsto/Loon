@@ -1,10 +1,10 @@
-#!name=扫描全能王「Vip」
+#!name=扫描全能王 「Vip」
 
 #!desc=扫描全能王
 
 #!author=NobyDa
 
-#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/cs.png
+#!icon=https://github.com/yjjsto/Loon/raw/main/icons/cs.png
 
 [Mitm]
 
@@ -12,4 +12,4 @@ hostname =ap*.intsig.net
 
 [Script]
 
-http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js, tag=扫描全能王
+http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1, script-path=https://github.com/yjjsto/Loon/raw/main/Vip/js/CamScanner.js, tag=扫描全能王
