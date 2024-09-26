@@ -15,8 +15,8 @@ arg3 = switch,true,tag=达美乐披萨Token
 arg04 = input,"4 9 * * *",true,tag=美团买菜
 arg4 = switch,true,tag=美团买菜token
 
-arg05 = input,"5 9 * * *",true,tag=美的
-arg5 = switch,true,tag=美的Token
+#arg05 = input,"5 9 * * *",true,tag=美的
+#arg5 = switch,true,tag=美的Token
 
 arg06 = input,"6 9 * * *",true,tag=蜜雪冰城
 arg6 = switch,true,tag=蜜雪冰城Token
@@ -59,7 +59,7 @@ cron {arg01} script-path=https://github.com/yjjsto/Loon/raw/main/script/ampDache
 #cron {arg02} script-path=https://github.com/yjjsto/Loon/raw/main/script/bgps.js, enable = {arg2}, tag=比格披萨
 cron {arg03} script-path=https://github.com/yjjsto/Loon/raw/main/script/dlm.js,enable = {arg3}, tag=达美乐披萨
 cron {arg04} script-path=https://github.com/yjjsto/Loon/raw/main/script/meituan.coin.js, enable = {arg4}, tag=美团买菜
-cron {arg05} script-path=https://github.com/yjjsto/Loon/raw/main/script/midea.js, enable = {arg5}, tag=美的
+#cron {arg05} script-path=https://github.com/yjjsto/Loon/raw/main/script/midea.js, enable = {arg5}, tag=美的
 cron {arg06} script-path=https://github.com/yjjsto/Loon/raw/main/script/mxbc.js, enable = {arg6}, tag=蜜雪冰城
 cron {arg07} script-path=https://github.com/yjjsto/Loon/raw/main/script/naixue.js, enable = {arg7}, tag=奈雪
 cron {arg012} script-path=https://github.com/yjjsto/Loon/raw/main/script/ningji.js, enable = {arg12}, tag=柠季
